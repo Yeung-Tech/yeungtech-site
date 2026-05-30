@@ -322,57 +322,10 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 5rem;
-      align-items: center;
+      align-items: start;
       max-width: 1100px;
       margin: 0 auto;
     }
-
-    .about-visual {
-      position: relative;
-      height: 360px;
-    }
-
-    .about-box {
-      position: absolute;
-      border-radius: 16px;
-      border: 1px solid var(--border);
-    }
-
-    .about-box-main {
-      inset: 0;
-      background: linear-gradient(135deg, rgba(50,104,255,0.12), rgba(26,74,204,0.06));
-      display: flex; align-items: center; justify-content: center;
-    }
-
-    .about-y {
-      font-size: 9rem;
-      font-weight: 800;
-      background: linear-gradient(135deg, var(--blue-dark), var(--blue-light));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      opacity: 0.7;
-      user-select: none;
-    }
-
-    .about-stat {
-      position: absolute;
-      background: var(--bg2);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 0.9rem 1.2rem;
-      font-size: 0.85rem;
-    }
-    .about-stat strong {
-      display: block;
-      font-size: 1.4rem;
-      font-weight: 700;
-      color: var(--blue-light);
-    }
-    .about-stat span { color: var(--muted); }
-
-    .stat-1 { top: 10%; right: -10%; }
-    .stat-2 { bottom: 10%; left: -10%; }
 
     .about-text .section-sub { margin-bottom: 2rem; }
 
@@ -396,6 +349,30 @@
       background: linear-gradient(135deg, var(--blue-dark), var(--blue-light));
       flex-shrink: 0;
       box-shadow: 0 0 8px var(--glow);
+    }
+
+    .about-stack-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    .tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+
+    .tech-tag {
+      background: rgba(50,104,255,0.08);
+      border: 1px solid rgba(50,104,255,0.2);
+      border-radius: 6px;
+      padding: 0.4rem 0.85rem;
+      font-size: 0.85rem;
+      color: var(--blue-light);
+      font-weight: 500;
     }
 
     /* ── CTA BAND ── */
@@ -487,8 +464,6 @@
     /* ── RESPONSIVE ── */
     @media (max-width: 768px) {
       #about { grid-template-columns: 1fr; gap: 3rem; padding: 4rem 6%; }
-      .about-visual { height: 260px; }
-      .stat-1 { right: 0; }
       .stat-2 { left: 0; }
       .form-row { grid-template-columns: 1fr; }
       nav .nav-links { display: none; }
@@ -574,31 +549,36 @@
   <!-- ABOUT -->
   <section style="padding: 6rem 6%;">
     <div id="about">
-      <div class="about-visual">
-        <div class="about-box about-box-main">
-          <span class="about-y">Y</span>
-        </div>
-        <div class="about-stat stat-1">
-          <strong>+50</strong>
-          <span>Projects delivered</span>
-        </div>
-        <div class="about-stat stat-2">
-          <strong>100%</strong>
-          <span>Satisfied clients</span>
-        </div>
-      </div>
       <div class="about-text">
-        <p class="section-label">About us</p>
-        <h2 class="section-title">Software that solves,<br>not complicates</h2>
+        <p class="section-label">About</p>
+        <h2 class="section-title">Engineering-first<br>software studio</h2>
         <p class="section-sub">
-          We're a software house focused on delivering solutions that actually work. We work closely with our clients to understand the problem before writing a single line of code.
+          YeungTech was founded by <strong>Marlon Yeung</strong>, a software engineer with hands-on experience building scalable backend systems, cloud infrastructure, and automation solutions for businesses.
         </p>
-        <ul class="about-list">
-          <li>Experienced team focused on outcomes</li>
-          <li>Agile processes with transparent communication</li>
-          <li>Clean, tested, and well-documented code</li>
-          <li>Ongoing support after launch</li>
+        <p class="section-label">What we build</p>
+        <ul class="about-list" style="margin-top: 0.75rem;">
+          <li>Scalable backend systems and REST APIs</li>
+          <li>Cloud infrastructure on AWS</li>
+          <li>Automation and integration solutions</li>
+          <li>AI-powered software features</li>
+          <li>Microservices architecture</li>
         </ul>
+      </div>
+      <div class="about-stack">
+        <p class="about-stack-label">Technology stack</p>
+        <div class="tech-stack">
+          <span class="tech-tag">Java</span>
+          <span class="tech-tag">Spring Boot</span>
+          <span class="tech-tag">PostgreSQL</span>
+          <span class="tech-tag">AWS</span>
+          <span class="tech-tag">Docker</span>
+          <span class="tech-tag">Terraform</span>
+          <span class="tech-tag">REST APIs</span>
+          <span class="tech-tag">Microservices</span>
+          <span class="tech-tag">Cloud Infrastructure</span>
+          <span class="tech-tag">Automation</span>
+          <span class="tech-tag">AI-powered solutions</span>
+        </div>
       </div>
     </div>
   </section>
