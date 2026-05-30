@@ -17,6 +17,12 @@ provider "aws" {
   region = var.aws_region
 }
 
+# Required to destroy orphaned ACM resources from previous state
+provider "aws" {
+  alias  = "us_east_1"
+  region = "us-east-1"
+}
+
 # ─── Route 53 ────────────────────────────────────────────────────────────────
 
 resource "aws_route53_zone" "site" {
