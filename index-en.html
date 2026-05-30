@@ -351,28 +351,12 @@
       box-shadow: 0 0 8px var(--glow);
     }
 
-    .about-stack-label {
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--muted);
-      margin-bottom: 1rem;
-    }
-
-    .tech-stack {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.6rem;
-    }
-
-    .tech-tag {
-      background: rgba(50,104,255,0.08);
-      border: 1px solid rgba(50,104,255,0.2);
-      border-radius: 6px;
-      padding: 0.4rem 0.85rem;
-      font-size: 0.85rem;
-      color: var(--blue-light);
-      font-weight: 500;
+    .about-photo {
+      width: 100%;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      display: block;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
     }
 
     /* ── CTA BAND ── */
@@ -564,21 +548,8 @@
           <li>Microservices architecture</li>
         </ul>
       </div>
-      <div class="about-stack">
-        <p class="about-stack-label">Technology stack</p>
-        <div class="tech-stack">
-          <span class="tech-tag">Java</span>
-          <span class="tech-tag">Spring Boot</span>
-          <span class="tech-tag">PostgreSQL</span>
-          <span class="tech-tag">AWS</span>
-          <span class="tech-tag">Docker</span>
-          <span class="tech-tag">Terraform</span>
-          <span class="tech-tag">REST APIs</span>
-          <span class="tech-tag">Microservices</span>
-          <span class="tech-tag">Cloud Infrastructure</span>
-          <span class="tech-tag">Automation</span>
-          <span class="tech-tag">AI-powered solutions</span>
-        </div>
+      <div>
+        <img src="founder.png" alt="Marlon Jhow Yeung – Founder of YeungTech" class="about-photo" />
       </div>
     </div>
   </section>
