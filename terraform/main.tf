@@ -41,3 +41,11 @@ resource "aws_route53_record" "site" {
     "185.199.111.153",
   ]
 }
+
+resource "aws_route53_record" "www" {
+  zone_id = aws_route53_zone.site.zone_id
+  name    = "www.${var.domain_name}"
+  type    = "CNAME"
+  ttl     = 300
+  records = ["yeung-tech.github.io"]
+}
